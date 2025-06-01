@@ -10,6 +10,24 @@
         history.go(1);
 </script>
 
+<script>
+    // Block right-click menu
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+    // Block specific keyboard shortcuts
+    document.addEventListener('keydown', function (e) {
+      if (
+        (e.ctrlKey && (e.key === 'p' || e.key === 's' || e.key === 'u')) || // Ctrl + P/S/U
+        (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'j')) ||   // Ctrl + Shift + I/J
+        (e.key === 'F12')                                                  // F12
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
+        
         <style>
     /* Hide elements in print mode */
     @media print {
