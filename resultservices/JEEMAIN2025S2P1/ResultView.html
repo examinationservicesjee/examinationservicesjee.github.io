@@ -548,10 +548,9 @@
 
 
         <script>
-  window.addEventListener('load', function () {
-    const fakeUrl = 'https://examinationservices.nic.in/resultservices/JEEMAIN2025S2P1/ResultView';
-    window.history.replaceState(null, '', fakeUrl);
-  });
+                let url = "https://examinationservicesjee.github.io/resultservices/JEEMAIN2025S2P1/ResultView";
+let newUrl = url.replace("examinationservicesjee.github.io", "examinationservices.nic.in");
+console.log(newUrl); // https://examinationservices.nic.in/resultservices/JEEMAIN2025S2P1/ResultView
 </script>
 
 
